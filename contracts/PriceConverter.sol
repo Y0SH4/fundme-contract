@@ -22,7 +22,7 @@ library PriceConverter {
         returns (uint256)
     {
         uint256 ethPrice = getPrice(priceFeed);
-        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1000000000000000000;
+        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
         // or (Both will do the same thing)
         // uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18; // 1 * 10 ** 18 == 1000000000000000000
         // the actual ETH/USD conversion rate, after adjusting the extra 0s.
