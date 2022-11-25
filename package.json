@@ -1,4 +1,6 @@
 {
+  "name": "fundme",
+  "author": "Y0SH4",
   "devDependencies": {
     "@chainlink/contracts": "^0.5.1",
     "@ethersproject/abi": "^5.4.7",
@@ -21,5 +23,11 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "test": "pnpm hardhat test",
+    "test:staging": "pnpm hardhat test --network goerli",
+    "format": "pnpm prettier --write .",
+    "coverage": "pnpm hardhat coverage"
   }
 }
